@@ -1,12 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
 import Avatar from './components/Avatar/Avatar';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header><h1>Mi primer App </h1></header>
-      <Avatar />
+      <Navbar />
+      <main>
+        <Avatar name='Gustavo' age='41'/>
+        <Avatar name='Gabriel' age='18'/>
+      </main>
     </div>
   );
 }
