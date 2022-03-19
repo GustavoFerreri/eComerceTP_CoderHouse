@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { NavItem } from './NavItem';
 import { Button } from '../Button/Button';
+import { CartWidget } from '../CartWidget/CartWidget';
 import './Navbar.css';
 
 // Reemplazamos class por arrow function
@@ -28,7 +29,8 @@ const Navbar = (props) => {
                     )
                 })}
             </ul>
-            <Button>Sign Up</Button>         
+            <Button>Sign Up</Button>
+            <CartWidget>1</CartWidget>
         </nav>    
     );
 }
