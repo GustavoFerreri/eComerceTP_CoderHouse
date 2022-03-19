@@ -19,7 +19,7 @@ const Navbar = (props) => {
                     )
                 })}
             </ul>
-            <Button Sign>Sign Up</Button>         
+            <Button>Sign Up</Button>         
         </nav>    
     );
 }
