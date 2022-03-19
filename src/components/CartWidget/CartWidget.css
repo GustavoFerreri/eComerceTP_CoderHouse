@@ -1,0 +1,15 @@
+.cart-widget{
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.fa-shopping-cart {
+    color: #fff;
+    margin-left: 0.5 rem;
+    font-size: 1.5rem;
+}
+.chart{
+    margin-left: 1rem; 
+}

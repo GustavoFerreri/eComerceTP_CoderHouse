@@ -1,9 +1,10 @@
 import './Avatar.css';
 // import Button from '../Button/Button';
 
-const Avatar = ({name, age, ...rest}) => {
+// Se Agrega el parametro key para no repetir el componente
+const Avatar = ({key, name, age, ...rest}) => {
     return(
-        <picture>
+        <picture key={key}>
             <img src='https://randomuser.me/api/portraits/lego/5.jpg' alt='lego'></img>
             <p>Nombre: {name}</p>
             <p>Edad: {age}</p>

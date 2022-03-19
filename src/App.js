@@ -1,15 +1,15 @@
-// import logo from './logo.svg';
 import './App.css';
-import Avatar from './components/Avatar/Avatar';
+// Se retira importacion del componente para agregar el contenedor de items
+// import Avatar from './components/Avatar/Avatar';
 import Navbar from './components/Navbar/Navbar';
+import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <main>
-        <Avatar name='Gustavo' age='41'/>
-        <Avatar name='Gabriel' age='18'/>
+        <ItemListConteiner />
       </main>
     </div>
   );
