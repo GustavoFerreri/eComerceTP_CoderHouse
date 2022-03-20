@@ -1,14 +1,17 @@
 import './Avatar.css';
-// import Button from '../Button/Button';
+import ItemCount from '../ItemCount/ItemCount';
 
-// Se Agrega el parametro key para no repetir el componente
-const Avatar = ({key, name, age, ...rest}) => {
+const Avatar = ({cod, name, price, stock, ...rest}) => {
     return(
-        <picture key={key}>
+        <picture>
             <img src='https://randomuser.me/api/portraits/lego/5.jpg' alt='lego'></img>
-            <p>Nombre: {name}</p>
-            <p>Edad: {age}</p>
-            {/* <Button /> */}
+            <div className='avatarInfo'>
+                <p>Codigo: <span className='avatarInfo-data'>{cod}</span></p>
+                <p>Nombre: <span className='avatarInfo-data'>{name}</span></p>
+                <p>Precio: <span className='avatarInfo-data'>{price}</span></p>
+            </div>
+            {/* Enviamos el stock para manipularlo desde el  */}
+            <ItemCount props={stock}/>
         </picture>
     )
 }

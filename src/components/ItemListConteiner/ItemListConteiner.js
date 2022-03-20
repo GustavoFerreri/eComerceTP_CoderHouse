@@ -6,7 +6,11 @@ const ItemListConteiner = () => {
     return(
         <div className='mainApp'>
             {ItemList.map((item, index) => {
-                return(<Avatar key={index} name={item.name} age={item.age}/> )
+                return(
+                    <div key={index}>
+                        {/* Reutilizamos el componente Avatar */}
+                        <Avatar cod={item.cod} name={item.name} price={item.price} stock={item.stock}/> 
+                    </div>)
             })}
         </div>
     )

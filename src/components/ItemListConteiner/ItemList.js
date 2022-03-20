@@ -1,18 +1,26 @@
 export const ItemList = [
     {
-        name: 'Gustavo',
-        age: '41',
+        cod: 1,
+        name: 'Iphone X',
+        price: 200,
+        stock: 10
     },
     {
-        name: 'Eugenia',
-        age: '35',
+        cod: 2,
+        name: 'Iphone S',
+        price: 100,
+        stock: 5
     },
     {
-        name: 'Gabriel',
-        age: '23',
+        cod: 3,
+        name: 'Iphone XS',
+        price: 250,
+        stock: 15
     },
     {
-        name: 'Guadalupe',
-        age: '27',
+        cod: 4,
+        name: 'Iphone XL',
+        price: 350,
+        stock: 20
     }
 ]
