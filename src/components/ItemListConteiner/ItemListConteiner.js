@@ -1,11 +1,20 @@
 import './ItemListConteiner.css';
-import { ItemList } from './ItemList';
 import Avatar from '../Avatar/Avatar';
+import { useState, useEffect} from 'react';
+import { ItemList } from './ItemList';
 
 const ItemListConteiner = () => {
+    // Se implementa useState y useEffect sin dependencia para resolver la promesa
+    const [products, setProducts] = useState([])
+    useEffect(() =>{
+        ItemList().then(res => {
+            setProducts(res)
+        })
+    }, []);
     return(
         <div className='mainApp'>
-            {ItemList.map((item, index) => {
+            {/* Mapeamos ya el producto seteado con el hook */}
+            {products.map((item, index) => {
                 return(
                     <div key={index}>
                         {/* Reutilizamos el componente Avatar */}
