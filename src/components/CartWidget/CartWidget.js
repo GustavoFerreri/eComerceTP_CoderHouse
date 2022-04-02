@@ -1,4 +1,5 @@
 import './CartWidget.css';
+import React from 'react';
 
 export const CartWidget = ({
     children

@@ -1,8 +1,8 @@
-picture {
+.detailInfo-picture{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 175px;
+    width: 450px;
     margin: 10px 10px 10px 10px;
     padding: 10px 20px;
     border: 1px solid ;
@@ -14,30 +14,30 @@ picture {
         box-shadow: 0 0 15px #555;
         margin-bottom: 10px;
     }
-.avatarInfo{
+.detailInfo{
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
-.avatarInfo-data{
-    font-size: 1.2rem;
+.detailInfo-data{
+    font-size: 1.7rem;
     font-weight: bold;
 }
-.avatarInfo-link{
-    font-size:0.95rem;
+.detailInfo-link{
+    font-size:1.2rem;
     text-decoration: none;
     text-align: center;
-    margin-top: 10px;
-    padding: 2px;
+    margin-top: 20px;
+    padding: 10px;
     border-radius: 10px;
     color: #3acbf7;
     background-color: rgba(248, 248, 248, 0.322);
 }
 
-.avatarInfo-link:hover{
+.detailInfo-link:hover{
     color: #fff;
     background-color: #3acbf7;
 }
