@@ -1,5 +1,6 @@
 import './ItemCount.css';
 import {Button}from '../Button/Button';
+import React from 'react';
 import {useState} from 'react';
 
 const ItemCount = ({props}) =>{
@@ -14,6 +15,9 @@ const ItemCount = ({props}) =>{
             setCount(count - 1);
         }
     }
+    const addBuy = () => {
+        return true
+    }
     return(
         <div>
             <div className='item-count'>
@@ -22,7 +26,7 @@ const ItemCount = ({props}) =>{
                 <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={increment}>+</Button>
             </div>
             <div className='item-add'>
-                <Button buttonStyle='btn--primary' buttonSize='btn--medium'>Agregar al carrito</Button>
+                <Button buttonStyle='btn--primary' buttonSize='btn--medium' onclick={addBuy}>Agregar al carrito</Button>
             </div>
         </div>
     )

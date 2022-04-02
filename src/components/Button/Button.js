@@ -1,9 +1,11 @@
 // import React from 'react'
-import './Button.css'
+import './Button.css';
+import React from 'react';
 
 const STYLES = [
     'btn--primary',
-    'btn--secondary'
+    'btn--secondary',
+    'btn--detail'
 ]
 
 const SYZE = [

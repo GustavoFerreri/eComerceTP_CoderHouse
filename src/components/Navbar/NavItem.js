@@ -1,17 +1,17 @@
 export const NavItem = [
     {
         title: 'Home',
-        link: '#',
+        link: '/',
         cName: 'nav-item'
     },
     {
         title: 'Productos',
-        link: '#',
+        link: '/product',
         cName: 'nav-item'
     },
     {
         title: 'Contactenos',
-        link: '#',
+        link: '/contact',
         cName: 'nav-item'
     },
     {
