@@ -1,0 +1,10 @@
+.homeLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homeLogo img {
+    opacity:0.2;
+    border-radius: 25%;
+    margin-top: 20px;
+}

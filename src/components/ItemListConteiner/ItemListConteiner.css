@@ -2,3 +2,41 @@
     display: flex;
     flex-direction: row;
 }
+.mainApp-option{
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #9bbed9;
+    width: 10vw;
+    padding: 10px;
+}
+.mainApp-context{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    padding: 10px;
+}
+.mainApp-option-category{
+    margin-top: 20px;
+}
+.mainApp-option-category select{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border: 0;
+    border-radius: 7px;
+    width: 8vw;
+}
+.mainApp-option-id{
+    margin-top: 20px;
+}
+.mainApp-option-id input{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border: 0;
+    border-radius: 7px;
+    width: 8vw;     
+}
