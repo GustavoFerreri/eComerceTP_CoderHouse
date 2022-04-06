@@ -1,8 +1,8 @@
 import './ItemListConteiner.css';
-import React from 'react';
 import Avatar from '../Avatar/Avatar';
-import { useState, useEffect} from 'react';
+import {Button} from '../Button/Button';
 import { ItemList } from './ItemList';
+import React, { useState, useEffect} from 'react';
 
 const ItemListConteiner = () => {
     // Se implementa useState y useEffect sin dependencia para resolver la promesa
@@ -13,12 +13,10 @@ const ItemListConteiner = () => {
             <div className='mainApp-option'>
                 <div className='mainApp-option-category'>
                     <p>Categoria</p>
-                    <select>
-                        <option>Todos</option>
-                        <option>Celulares</option>
-                        <option>Notebook</option>
-                        <option>Tablet</option>
-                    </select>
+                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Todos</Button>
+                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Celular</Button>
+                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Notebook</Button>
+                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Tablet</Button>
                 </div>
                 <div className='mainApp-option-id'>
                     <p>Buscar id</p>

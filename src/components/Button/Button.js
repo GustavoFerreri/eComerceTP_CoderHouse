@@ -5,7 +5,8 @@ import React from 'react';
 const STYLES = [
     'btn--primary',
     'btn--secondary',
-    'btn--detail'
+    'btn--detail',
+    'btn-category'
 ]
 
 const SYZE = [
