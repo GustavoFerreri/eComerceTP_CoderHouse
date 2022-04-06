@@ -17,15 +17,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-<<<<<<< HEAD
-          <Route path='/' element={<ItemListConteiner />}/>
-          <Route path='/product/:category' element={<ItemListConteiner />}/>
-=======
           <Route path='/' element={<Home />}/>
           <Route path='/all' element={<ItemListConteiner />}/> 
           <Route path='/product/:category' element={<ItemListConteiner />}/>
           <Route path='/contact' element={<Contact />}/>
->>>>>>> Category
           <Route path='/detail/:Cod' element={<ItemDetailContainer/> }/>
         </Routes>
       </BrowserRouter>
