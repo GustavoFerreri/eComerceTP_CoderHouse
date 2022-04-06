@@ -5,8 +5,8 @@ export const NavItem = [
         cName: 'nav-item'
     },
     {
-        title: 'Celulares',
-        link: '/product/phone',
+        title: 'Productos',
+        link: '/all',
         cName: 'nav-item'
     },
     {
