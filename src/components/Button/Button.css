@@ -54,3 +54,19 @@
     color: #6568f4;
     transition: 250ms;
 }
+
+.btn-category{
+    width: 9vw;
+    padding: 5px 20px;
+    margin: 2px;
+    transition: all 0.3s ease out;
+    background: #c3d4e0;
+    color: #27276b;
+}
+.btn-category:hover {
+    padding: 5px 20px;
+    transition: all 0.3s ease out;
+    background: #fff;
+    color: #6568f4;
+    transition: 250ms;
+}

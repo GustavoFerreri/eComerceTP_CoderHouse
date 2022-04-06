@@ -5,13 +5,18 @@ export const NavItem = [
         cName: 'nav-item'
     },
     {
-        title: 'Productos',
-        link: '/product',
+        title: 'Celulares',
+        link: '/product/phone',
         cName: 'nav-item'
     },
     {
-        title: 'Contactenos',
-        link: '/contact',
+        title: 'Notebook',
+        link: '/product/notebook',
+        cName: 'nav-item'
+    },
+    {
+        title: 'Tablet',
+        link: '/product/tablet',
         cName: 'nav-item'
     },
     {
