@@ -21,11 +21,10 @@ const ItemDetailContainer = () => {
                         <p>Codigo: <span className='detailInfo-data'>{product.cod}</span></p>
                         <p>Nombre: <span className='detailInfo-data'>{product.name}</span></p>
                         <p>Precio: <span className='detailInfo-data'>{product.price}</span></p>
-                        <Link to={`/`} className='detailInfo-link'>Volver a la pantalla de productos</Link>
+                        <Link to={`/all`} className='detailInfo-link'>Volver a la pantalla de productos</Link>
                     </div>
                 </picture>
             </div>
-
         </div>
     );
 }

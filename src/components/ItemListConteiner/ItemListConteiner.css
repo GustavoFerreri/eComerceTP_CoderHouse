@@ -19,6 +19,8 @@
     padding: 10px;
 }
 .mainApp-option-category{
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
 }
 .mainApp-option-category select{
@@ -39,4 +41,27 @@
     border: 0;
     border-radius: 7px;
     width: 8vw;     
+}
+
+.btn-category{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 7vw;
+    padding: 5px 20px;
+    margin-top: 2px;
+    transition: all 0.3s ease out;
+    background: #c3d4e0;
+    color: #27276b;
+}
+
+.btn-category:hover {
+    padding: 5px 20px;
+    transition: all 0.3s ease out;
+    background: #fff;
+    color: #6568f4;
+    transition: 250ms;
 }

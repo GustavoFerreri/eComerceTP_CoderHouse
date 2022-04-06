@@ -2,7 +2,7 @@ import './ItemListConteiner.css';
 import Avatar from '../Avatar/Avatar';
 import { ItemList } from './ItemList';
 import React, { useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom' 
+import { useParams } from 'react-router-dom';
 
 const ItemListConteiner = () => {
     // Se implementa useState y useEffect sin dependencia para resolver la promesa
@@ -16,10 +16,10 @@ const ItemListConteiner = () => {
             {/* <div className='mainApp-option'>
                 <div className='mainApp-option-category'>
                     <p>Categoria</p>
-                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Todos</Button>
-                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Celular</Button>
-                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Notebook</Button>
-                    <Button buttonStyle='btn-category' buttonSize='btn--medium'>Tablet</Button>
+                    <a href='/all' className='btn-category'>Todos</a>
+                    <a href='/product/phone' className='btn-category'>Celulares</a>
+                    <a href='/product/notebook' className='btn-category'>Notebooks</a>
+                    <a href='/product/tablet' className='btn-category'>Tablet</a>
                 </div>
                 <div className='mainApp-option-id'>
                     <p>Buscar id</p>
