@@ -13,7 +13,7 @@ const ItemListConteiner = () => {
     return(
         <div className='mainApp'>
             {/* Seguiremos trabajando en la idea tras la entrega */}
-            {/* <div className='mainApp-option'>
+            <div className='mainApp-option'>
                 <div className='mainApp-option-category'>
                     <p>Categoria</p>
                     <a href='/all' className='btn-category'>Todos</a>
@@ -25,7 +25,7 @@ const ItemListConteiner = () => {
                     <p>Buscar id</p>
                     <input></input>
                 </div>
-            </div> */}
+            </div>
             <div className='mainApp-context'>
                 {/* Mapeamos ya el producto seteado con el hook */}
                 {products.map((item, index) => {
