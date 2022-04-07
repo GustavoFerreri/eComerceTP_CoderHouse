@@ -8,6 +8,7 @@ import Contact from './components/Contact/Contact';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
+// Se vuelve a Branch Category como base, error masivo al fusionar con master
 function App() {
   return (
     <div className="App">
