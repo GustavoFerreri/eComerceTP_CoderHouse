@@ -1,0 +1,80 @@
+class Usuario{
+    constructor(nombre, apellido){
+      this.name = nombre.toString();
+      this.lastname = apellido.toString();
+      this.books= [];
+      this.pets= [];
+    }
+    getFullName=()=>`Nombre completo ${this.name} ${this.lastname}`
+    addMascota=(mascota)=>this.pets.push(mascota)
+    countMascotas=()=>this.pets.length
+  	addBook=(nombre, autor)=>this.books.push({titulo: nombre, escritor: autor})
+  	getBookNames=()=>this.books.map(book=>book.titulo)
+}
+
+// Cargamos un usuario
+let alumno = new Usuario('Gustavo', 'Ferreri')
+// Devolvemos por consola
+console.log(alumno.getFullName())
+
+// Agregamos un par de mascotas
+alumno.addMascota('Perro')
+alumno.addMascota('Gato')
+// Mostramos por consola las mascotas
+console.log(`Cantidad de mascotas ${alumno.countMascotas()}`)
+
+// Cargamos libros
+alumno.addBook('Padre pobre Padre rico', 'Robert Kiyosaki')
+alumno.addBook('Vaca purpura', 'Juan Diego Gomez')
+alumno.addBook('Habitos de rico', 'Juan Diego Gomez')
+// Devolvemos Los titulos de los libros
+console.log(alumno.getBookNames())
+
+
+// const obtenerMayor=(x, y)=>{
+//     if (Number.isInteger(x) && Number.isInteger(y)){
+//     if (x>y){
+//       return `El num x (${x})es mayor`
+//     } else if(y>x) {
+//       return `El num y (${y})es mayor`
+//     } else {
+//       return `son iguales num (${x})`
+//     }
+//   } else {
+//     return 'Ambos datos no son enteros'
+//   }
+// }
+
+// funcion arrow con ternario
+const obtenerMayor=(x, y)=> Number.isInteger(x) && Number.isInteger(y) ? x > y ? x: y > x ? y: x: 'Ambos datos no son enteros'
+
+// callback
+const sum=(x,y)=>x+y
+const rest=(x,y)=>x-y
+const mult=(x,y)=>x*y
+const div=(x,y)=>x/y
+const calc = (x, y, cb)=> cb(x, y)
+calc(2, 3, sum)
+
+// callback hell no funcionan mas, ahora no va mas
+
+// Promesa
+const  datos = [1,2,3,4]
+const getInfo = () =>{
+  return new Promise((resolve, reject)=>{
+    if(datos.length === 0){
+      reject(new Error('Error en la promesa!!!'))
+    } else {
+      setTimeout(()=>{
+              resolve(datos)
+      }, 2000)
+    }
+  })
+}
+getInfo().then((res)=>{
+  console.log(res)
+})
+
+
+// sincronia y asincronia
+
