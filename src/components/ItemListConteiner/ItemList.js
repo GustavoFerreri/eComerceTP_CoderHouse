@@ -2,10 +2,10 @@
 
 export const ItemList = (category) => 
         new Promise((resolve, reject)=> 
-                setTimeout(()=>{
+        setTimeout(()=>{
                 category ? resolve(require('./ItemList.json').filter(prod=>prod.category===category)):
                 resolve(require('./ItemList.json'))
-                }, 500))
+        }, 500))
 
 export const SimpleItem = (cod) => 
         new Promise((resolve, reject)=> 
