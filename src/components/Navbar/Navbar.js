@@ -29,6 +29,8 @@ const Navbar = (props) => {
                     )
                 })}
             </ul>
+            {/* Implementacion a futuro busqueda en tiempo real */}
+            {/* <input></input> */}
             <Button>Sign Up</Button>
             <CartWidget>1</CartWidget>
         </nav>    

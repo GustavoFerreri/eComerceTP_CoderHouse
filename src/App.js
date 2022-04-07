@@ -4,10 +4,10 @@ import './App.css';
 // Se tuvo que agregar import React from 'react'; en cada uno de los elementos
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+// import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
-import Contact from './components/Contact/Contact';
+// import Contact from './components/Contact/Contact';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 

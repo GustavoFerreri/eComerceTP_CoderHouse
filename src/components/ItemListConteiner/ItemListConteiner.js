@@ -7,11 +7,13 @@ import { useParams } from 'react-router-dom';
 const ItemListConteiner = () => {
     // Se implementa useState y useEffect sin dependencia para resolver la promesa
     const [products, setProducts] = useState([])
+    // Aplicamos useParams()
     const { category } = useParams()
     useEffect(() =>{ItemList(category).then(res => {setProducts(res)})}, []);
     return(
         <div className='mainApp'>
-            <div className='mainApp-option'>
+            {/* Seguiremos trabajando en la idea tras la entrega */}
+            {/* <div className='mainApp-option'>
                 <div className='mainApp-option-category'>
                     <p>Categoria</p>
                     <a href='/all' className='btn-category'>Todos</a>
@@ -23,7 +25,7 @@ const ItemListConteiner = () => {
                     <p>Buscar id</p>
                     <input></input>
                 </div>
-            </div>
+            </div> */}
             <div className='mainApp-context'>
                 {/* Mapeamos ya el producto seteado con el hook */}
                 {products.map((item, index) => {

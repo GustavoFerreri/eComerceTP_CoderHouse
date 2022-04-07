@@ -1,4 +1,5 @@
 // retiramos los datos del js, para colocarlosa en un JSON
+
 export const ItemList = (category) => 
     new Promise((resolve, reject)=> 
         setTimeout(()=>{
