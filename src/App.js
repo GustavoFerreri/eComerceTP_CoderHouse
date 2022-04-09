@@ -17,10 +17,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/all' element={<ItemListConteiner />}/> 
+          <Route path='/all' element={<ItemListConteiner addToCart={setCart}/>}/> 
           <Route path='/product/:category' element={<ItemListConteiner addToCart={setCart} />}/>
           <Route path='/contact' element={<Contact />}/>
-          <Route path='/detail/:Cod' element={<ItemDetailContainer /> }/>
+          <Route path='/detail/:Cod' element={<ItemDetailContainer addToCart={setCart}/> }/>
         </Routes>
       </BrowserRouter>
     </div>
