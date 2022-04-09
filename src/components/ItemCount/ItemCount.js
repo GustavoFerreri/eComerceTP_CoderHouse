@@ -1,27 +1,19 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Button } from '../Button/Button';
 
-const ItemCount = ({props, addToCart}) =>{
+const ItemCount = ({props, onAdd}) =>{
     const [count, setCount] = useState(0);
-    const increment = () =>{
-        if (count < props){
-            setCount(count + 1);
-        }
-    }
-    const decrement = () =>{
-        if (count > 0){
-            setCount(count - 1);
-        }
-    }
+    const increment = () =>{ if (count < props){ setCount(count + 1); }}
+    const decrement = () =>{ if (count > 0){ setCount(count - 1); }}
     return(
         <div>
             <div className='item-count'>
-                <button onClick={decrement}>-</button>
+                <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={decrement}>-</Button>
                 <span className='item-count__count'>{count}</span>
-                <button onClick={increment}>+</button>
+                <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={increment}>+</Button>
             </div>
             <div className='item-add'>
-                <button onClick={addToCart(count)}>Add Cart</button>
+                <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={() => onAdd(count)}>Agregar al carrito</Button>
             </div>
         </div>
     )

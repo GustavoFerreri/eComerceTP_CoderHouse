@@ -6,11 +6,7 @@ import { useParams, Link } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
     const { Cod } = useParams()
-    useEffect(()=>{
-        SimpleItem(Cod)
-        .then(res=>{
-            setProduct(res)
-        })},[Cod]);
+    useEffect(()=>{SimpleItem(Cod).then(res=>{setProduct(res)})},[Cod]);
     return(
         <div className='detailInfo'>
             <h1>Detalle</h1>
@@ -21,7 +17,7 @@ const ItemDetailContainer = () => {
                         <p>Codigo: <span className='detailInfo-data'>{product.cod}</span></p>
                         <p>Nombre: <span className='detailInfo-data'>{product.name}</span></p>
                         <p>Precio: <span className='detailInfo-data'>{product.price}</span></p>
-                        <Link to={`/all`} className='detailInfo-link'>Volver a la pantalla de productos</Link>
+                        <Link to={`/product/all`} className='detailInfo-link'>Volver a la pantalla de productos</Link>
                     </div>
                 </picture>
             </div>

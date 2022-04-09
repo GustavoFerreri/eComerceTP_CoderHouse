@@ -5,7 +5,7 @@ import { ItemList } from '../../asyncMock';
 import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
-const Product = ({addToCart}) => {
+const Product = () => {
     // capturamos la categoria enviada, y asignamos el valor a products
     const [products, setProducts] = useState([])
     const { category } = useParams()
@@ -19,7 +19,7 @@ const Product = ({addToCart}) => {
                     return(
                         <div key={index}>
                             {/* Reutilizamos el componente Avatar */}
-                            <Item cod={element.cod} name={element.name} price={element.price} stock={element.stock} addToCart={addToCart}/> 
+                            <Item cod={element.cod} name={element.name} price={element.price} stock={element.stock}/> 
                         </div>)
                 })}
             </div>
