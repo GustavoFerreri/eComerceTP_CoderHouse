@@ -1,9 +1,10 @@
-// retiramos los datos del js, para colocarlosa en un JSON
+// Trasladamos las consultas a los datos fuera de itemListConteiner
 
 export const ItemList = (category) => 
         new Promise((resolve, reject)=> 
         setTimeout(()=>{
-                category ? resolve(require('./ItemList.json').filter(prod=>prod.category===category)):
+                // Se realiza una segunda condicion para categoria todos, colateral se elimina una linea en app
+                category && category !== 'all' ? resolve(require('./ItemList.json').filter(prod=>prod.category===category)):
                 resolve(require('./ItemList.json'))
         }, 500))
 

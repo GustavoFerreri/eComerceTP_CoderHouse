@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
-import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner';
+import Product from './components/Product/Product';
 import Contact from './components/Contact/Contact';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
@@ -17,8 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/all' element={<ItemListConteiner addToCart={setCart}/>}/> 
-          <Route path='/product/:category' element={<ItemListConteiner addToCart={setCart} />}/>
+          <Route path='/product/:category' element={<Product addToCart={setCart} />}/>
           <Route path='/contact' element={<Contact />}/>
           <Route path='/detail/:Cod' element={<ItemDetailContainer addToCart={setCart}/> }/>
         </Routes>

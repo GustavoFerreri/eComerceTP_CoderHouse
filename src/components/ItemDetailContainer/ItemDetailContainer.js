@@ -1,6 +1,6 @@
 import './ItemDetailContainer.css';
 import React, { useState, useEffect} from 'react';
-import { SimpleItem } from '../ItemListConteiner/ItemList';
+import { SimpleItem } from '../../asyncMock';
 import { useParams, Link } from 'react-router-dom';
 
 const ItemDetailContainer = () => {

@@ -6,7 +6,7 @@ export const NavItem = [
     },
     {
         title: 'Productos',
-        link: '/all',
+        link: '/product/all',
         cName: 'nav-item'
     },
     {
