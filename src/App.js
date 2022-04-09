@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 // Se vuelve a Branch Category como base, error masivo al fusionar con master
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <div className="App">
       <BrowserRouter>
@@ -17,9 +18,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/all' element={<ItemListConteiner />}/> 
-          <Route path='/product/:category' element={<ItemListConteiner />}/>
+          <Route path='/product/:category' element={<ItemListConteiner addToCart={setCart} />}/>
           <Route path='/contact' element={<Contact />}/>
-          <Route path='/detail/:Cod' element={<ItemDetailContainer/> }/>
+          <Route path='/detail/:Cod' element={<ItemDetailContainer /> }/>
         </Routes>
       </BrowserRouter>
     </div>
