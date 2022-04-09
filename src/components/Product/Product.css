@@ -18,29 +18,12 @@
     width: 90vw;
     padding: 10px;
 }
+
+/* Category */
 .mainApp-option-category{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-}
-.mainApp-option-category select{
-    font-size: 1.2rem;
-    margin-top: 5px;
-    padding: 5px;
-    border: 0;
-    border-radius: 7px;
-    width: 8vw;
-}
-.mainApp-option-id{
-    margin-top: 20px;
-}
-.mainApp-option-id input{
-    font-size: 1.2rem;
-    margin-top: 5px;
-    padding: 5px;
-    border: 0;
-    border-radius: 7px;
-    width: 8vw;     
 }
 
 .btn-category{
@@ -65,3 +48,17 @@
     color: #6568f4;
     transition: 250ms;
 }
+
+.mainApp-option-id{
+    margin-top: 20px;
+}
+
+.mainApp-option-id input{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 5px;
+    border: 0;
+    border-radius: 7px;
+    width: 8vw;     
+}
+

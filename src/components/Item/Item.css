@@ -38,7 +38,18 @@ picture {
     background-color: rgba(248, 248, 248, 0.322);
 }
 
+/* Item count */
 .itemInfo-link:hover{
     color: #fff;
     background-color: #3acbf7;
+}
+.item-count{
+    justify-self:end;
+}
+.item-count__count{
+    padding: 25px
+}
+.item-add{
+    padding: 0 10px 0 10px;
+    margin-top: 5px;
 }

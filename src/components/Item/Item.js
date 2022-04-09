@@ -1,10 +1,11 @@
+// Item reemplaza Avatar
 import './Item.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 // import {useState} from 'react';
 
-const Avatar = ({cod, name, price, stock, addToCart, ...rest}) => {
+const Item = ({cod, name, price, stock, addToCart, ...rest}) => {
     return(
         <picture>
             <img src='https://randomuser.me/api/portraits/lego/5.jpg' alt='lego'></img>
@@ -20,4 +21,4 @@ const Avatar = ({cod, name, price, stock, addToCart, ...rest}) => {
     )
 }
 
-export default Avatar;
+export default Item;
