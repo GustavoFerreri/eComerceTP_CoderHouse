@@ -7,4 +7,4 @@ In the project directory, you can run:
 
 ### `npm start`
 
-![image](https://gifs.com/gif/appgif-28XO0M)
+https://gifs.com/gif/appgif-28XO0M
