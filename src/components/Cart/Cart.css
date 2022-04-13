@@ -28,7 +28,7 @@
     color: #000;
     
 }
-.contentCart button{
+.contentCart-btnClr{
     background: #fff;
     color: #6568f4;
     font-size: 1.5rem;
@@ -38,7 +38,16 @@
     border-radius: 15px;
     box-shadow: 0 0 10px #6d76f7;
 }
-.contentCart button:hover{
+.contentCart-btnClr:hover{
     background: #6568f4;
     color: #fff;
+}
+.contentCart-btnDel {
+    background: rgb(173, 41, 41);
+    color: #d3d3f3;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 15px 10px 15px;
+    border: 0px;
+    border-radius: 5px;
 }
