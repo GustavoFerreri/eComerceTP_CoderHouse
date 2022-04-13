@@ -24,6 +24,9 @@ export const CartContextProvider = ({ children }) => {
         return count
     }
 
+    const isInCart = (id)=>{
+        
+    }
     return (
         <Context.Provider value={{ cart, addItem, clearCart, getQuantity}}>
             {children}
