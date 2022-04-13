@@ -29,13 +29,13 @@
     font-weight: bold;
 }
 .itemInfo-link{
-    font-size:0.95rem;
+    font-size: 1rem;
     text-decoration: none;
     text-align: center;
     margin-top: 10px;
     padding: 2px;
     border-radius: 10px;
-    color: #3acbf7;
+    color: #2b6577;
     background-color: rgba(248, 248, 248, 0.322);
 }
 
