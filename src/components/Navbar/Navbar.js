@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { useState } from 'react';
 import { NavItem } from './NavItem';
 import { Button } from '../Button/Button';
 import { CartWidget } from '../CartWidget/CartWidget';
+import CartContext from '../../context/CartContext';
 import './Navbar.css';
 
 // Reemplazamos class por arrow function
 const Navbar = (props) => {
     // Readaptamos el codigo con hooks
     const [state, setState] = useState(false);
+    const { getQuantity } = useContext(CartContext)
     const handleClick = () => {
         setState(!state);
     }
@@ -32,7 +34,7 @@ const Navbar = (props) => {
             {/* Implementacion a futuro busqueda en tiempo real */}
             {/* <input></input> */}
             <Button>Sign Up</Button>
-            <CartWidget>1</CartWidget>
+            <CartWidget>{getQuantity() === 0 ? '': getQuantity()}</CartWidget>
         </nav>    
     );
 }

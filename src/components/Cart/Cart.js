@@ -8,11 +8,17 @@ const Cart = () => {
         <div className='contentCart'>
             <h1 className='contentCart-title' >Cart</h1>
             <ul className='contentCart-list'>
-                {cart.map(prod => <li className='contentCart-listItem' key={prod.cod}><span>{prod.name}</span><span>{prod.quantity}</span></li>)}
+                {cart.map(prod =>
+                    <li className='contentCart-listItem' key={prod.cod}>
+                        <span>{prod.name}</span>
+                        <span>{prod.quantity}</span>
+                        <span>x</span>
+                    </li>
+                )}
             </ul>
             <button onClick={clearCart}>Vaciar carrito</button>
         </div>
     )
 }
 
-export default Cart
+export default Cart;
