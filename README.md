@@ -9,4 +9,4 @@ In the project directory, you can run:
 
 # Animacion del funcionamiento de la web
 
-<img src="https://j.gifs.com/28XO0M.gif" width="100%;"/>
+<img src="https://j.gifs.com/57MzL8.gif" width="100%;"/>
