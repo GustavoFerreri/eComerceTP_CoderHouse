@@ -45,7 +45,6 @@
 }
 .contentCart-listItem span{
     color: #000;
-    
 }
 .contentCart-btnClr{
     background: #fff;
@@ -57,6 +56,13 @@
     border-radius: 15px;
     margin-top:15px;
     box-shadow: 0 0 10px #6d76f7;
+}
+.contentPrice{
+    align-self: center;
+    padding: 10px;
+    font-size:1.8rem;
+    font-weight: bold;
+    color: #6568f4;
 }
 .contentCart-btnClr:hover{
     background: #6568f4;
