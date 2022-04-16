@@ -31,10 +31,8 @@ const Navbar = (props) => {
                     )
                 })}
             </ul>
-            {/* Implementacion a futuro busqueda en tiempo real */}
-            {/* <input></input> */}
             <Button>Sign Up</Button>
-            <CartWidget>{getQuantity() === 0 ? '': getQuantity()}</CartWidget>
+            {getQuantity() === 0 ? '': <CartWidget>{getQuantity()}</CartWidget>}
         </nav>    
     );
 }
