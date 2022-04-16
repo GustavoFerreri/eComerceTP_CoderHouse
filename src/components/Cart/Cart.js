@@ -4,12 +4,7 @@ import CartContext from '../../context/CartContext';
 import './Cart.css';
 
 const Cart = () => {
-    const { cart, clearCart, removeItem } = useContext(CartContext);
-    const totalPrice = () =>{
-        let acumulated = 0;
-        cart.forEach(prod=>acumulated+=prod.quantity*prod.price);
-        return acumulated;
-    }
+    const { cart, clearCart, removeItem, getTotalPrice } = useContext(CartContext);
     return (
         <div className='content'>
             <div className='contentCart'>
@@ -32,10 +27,16 @@ const Cart = () => {
                         </li>
                     )}
                 </ul>
-                <span className='contentPrice'> {cart.length > 0 ? `Total ${totalPrice()}`: 'Sin productos'}</span>
-                {cart.length > 0 ? 
-                    <button className='contentCart-btnClr' onClick={clearCart}>Vaciar carrito</button> :  
-                    <Link to={`/product/all`} className='detailInfo-link'>Volver a la pantalla de productos</Link>}
+                {cart.length > 0 ?
+                    <>
+                        <span className='contentPrice'> Total {getTotalPrice()}</span>
+                        <button className='contentCart-btnClr' onClick={clearCart}>Vaciar carrito</button>
+                    </>: 
+                    <>
+                        <span className='contentPrice'> Sin productos</span>
+                        <Link to={`/product/all`} className='detailInfo-link'>Volver a la pantalla de productos</Link>
+                    </>
+                }
             </div>
         </div>
     )

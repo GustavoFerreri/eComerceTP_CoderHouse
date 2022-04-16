@@ -5,7 +5,6 @@ const Context = createContext()
 
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
-    console.log(cart)
     const addItem = (product, quantity) => {
         const objItemCart = {
             ...product,
@@ -24,10 +23,16 @@ export const CartContextProvider = ({ children }) => {
         return count
     }
 
+    const getTotalPrice = () =>{
+        let acumulated = 0;
+        cart.forEach(prod=>{ acumulated += prod.quantity * prod.price });
+        return acumulated;
+    }
+
     const removeItem = (cod) => setCart(cart.filter(product=>product.cod !== cod))
 
     return (
-        <Context.Provider value={{ cart, addItem, clearCart, getQuantity, removeItem}}>
+        <Context.Provider value={{ cart, addItem, clearCart, getQuantity, removeItem, getTotalPrice}}>
             {children}
         </Context.Provider>
     )
