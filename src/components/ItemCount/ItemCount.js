@@ -13,7 +13,7 @@ const ItemCount = ({props, onAdd}) =>{
                 <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={increment}>+</Button>
             </div>
             <div className='item-add'>
-                <Button buttonStyle='btn--primary' buttonSize='btn--medium' onClick={() => onAdd(count)}>Agregar al carrito</Button>
+                <Button buttonStyle='btn--primary' buttonSize='btn--medium' disableBtn={count===0?true:false} onClick={() => onAdd(count)}>Agregar al carrito</Button>
             </div>
         </div>
     )

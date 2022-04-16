@@ -19,12 +19,13 @@ export const Button = ({
     type,
     onClick,
     buttonStyle,
-    buttonSize
+    buttonSize,
+    disableBtn
 })=>{
     const btnClass = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
     const btnSize = SYZE.includes(buttonSize) ? buttonSize : SYZE[0]
     return(
-        <button className={`btn ${btnClass} ${btnSize}`} onClick={onClick} type={type}>
+        <button className={`btn ${btnClass} ${btnSize}`} disabled={disableBtn}  onClick={onClick} type={type}>
             {children}
         </button>
     )
