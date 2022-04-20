@@ -1,12 +1,23 @@
 import './ItemDetailContainer.css';
 import React, { useState, useEffect} from 'react';
-import { SimpleItem } from '../../asyncMock';
+import { firestoreDb } from '../../services/firebase';
 import { useParams, Link } from 'react-router-dom';
+import { getDoc, doc} from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(true)
     const { Cod } = useParams()
-    useEffect(()=>{SimpleItem(Cod).then(res=>{setProduct(res)})},[Cod]);
+    useEffect(()=>{
+        setLoading(true)
+        const docRef = doc(firestoreDb, 'products', Cod)
+        getDoc(docRef).then(querySnapshot =>{
+            const product = {}
+        })
+        SimpleItem(Cod).then(res=>{setProduct(res)})
+        setLoading(false)
+    },[Cod]);
+    if(loading) return <h1>Cargando...</h1>
     return(
         <div className='detailInfo'>
             <h1>Detalle</h1>

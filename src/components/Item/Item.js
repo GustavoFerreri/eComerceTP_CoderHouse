@@ -9,8 +9,6 @@ const Item = ({cod, name, price, stock, ...rest}) => {
     const [quantity, setQuantity] = useState(0)
     const { addItem } = useContext(CartContext)
     const handleOnAdd = (count) => {
-        console.log('agregue al carrito')
-        console.log(count);
         setQuantity(count);
         addItem({cod, name, price}, count);
     }
@@ -20,7 +18,7 @@ const Item = ({cod, name, price, stock, ...rest}) => {
                 <img src='https://randomuser.me/api/portraits/lego/5.jpg' alt='lego'></img>
             </picture>
             <div className='itemInfo'>
-                <p>Codigo: <span className='itemInfo-data'>{cod}</span></p>
+                {/* <p>Codigo: <span className='itemInfo-data'>{cod}</span></p> */}
                 <p>Nombre: <span className='itemInfo-data'>{name}</span></p>
                 <p>Precio: <span className='itemInfo-data'>{price}</span></p>
                 <Link to={`/detail/${cod}`} className='itemInfo-link'>Detalle</Link>
