@@ -1,7 +1,6 @@
 import './Product.css';
 import Item from '../Item/Item';
 import { ProductCategory } from '../ProductCategory/ProductCategory';
-// import { ItemList } from '../../asyncMock';
 import { firestoreDb } from '../../services/firebase';
 import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';

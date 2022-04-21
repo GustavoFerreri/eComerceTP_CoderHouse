@@ -31,6 +31,9 @@
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
+.detailInfo-option p {
+    padding: 5px;
+}
 .detailInfo-data{
     font-size: 1.7rem;
     font-weight: bold;
