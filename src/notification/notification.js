@@ -14,7 +14,7 @@ const notificationStyles = {
     height: 'auto',
     padding: '10px 40px 10px 40px',
     color: 'white',
-    borderRadius: '25px 0 0 25px'
+    borderRadius: '25px 0 0 25px',
     }
     if(message === '') return null
     const config = true ?

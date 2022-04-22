@@ -12,7 +12,7 @@ export const CartContextProvider = ({ children }) => {
             quantity
         }
         setCart([...cart, objItemCart ])
-        setNotification('success', 'Se agregaron correctamente los productos')
+        setNotification('success', `Se agregaron correctamente los productos ${product.cod}`)
     }
 
     const clearCart = () => {
