@@ -1,31 +1,41 @@
-import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
-import { addDoc, collection, getFirestore, updateDoc, doc} from 'firebase/firestore';
-import { firestoreDb } from '../../services/firebase';
-import CartContext from '../../context/CartContext';
 import './Cart.css';
+import React, { useContext, useState } from "react";
+import { Link } from 'react-router-dom';
+import { useNotification } from '../../notification/notification'
+import CartContext from '../../context/CartContext';
+import { createOrderAndUpdateStock } from '../../services/firebase/firestore'
 
 const Cart = () => {
+    const [loading, setLoading] = useState(false)
+    const { setNotification } = useNotification()
     const { cart, clearCart, removeItem, getTotalPrice } = useContext(CartContext);
-    const createOrder = () =>{
+
+    const createOrder = () => {
+        setLoading(true)
         const objOrder = {
             buyer: {
                 name: 'Gustavo',
                 phone: '1234567890',
                 email: 'ferreri@mail.com'
             },
-            tems: cart,
+            items: cart,
             total: getTotalPrice()
         }
-        const collectionRef = collection(firestoreDb, 'orders')
-        addDoc(collectionRef, objOrder).then(res =>{
-            console.log(res)
+        createOrderAndUpdateStock(cart, objOrder).then(id => {
+            clearCart()
+            setNotification('success', `La orden se genero correctamente, su codigo de orden es: ${id}`)
+        }).catch((error) => {
+            if(error && error.name === 'outOfStockError' && error.products.length > 0) {
+                const stringProducts = error.products.map(prod => prod.dataDoc.name).join(', ')
+                setNotification('error', `${error.products.length > 1 ? 'Los productos' : 'El producto'} ${stringProducts} no ${error.products.length > 1 ? 'tienen' : 'tiene'} stock`)
+            } else {
+                console.log(error)
+            }
+        }).finally(() => {
+            setLoading(false)
         })
     }
-    const updateOrder = () => {
-        const docRef = doc(firestoreDb, 'orders', id);
-        updateDoc(docRef, { total: 9999 })
-    }
+    if(loading) return <h1>Se esta procesando la orden</h1>
     return (
         <div className='content'>
             <div className='contentCart'>
@@ -52,8 +62,7 @@ const Cart = () => {
                     <>
                         <span className='contentPrice'> Total {getTotalPrice()}</span>
                         <button className='contentCart-btnClr' onClick={()=>clearCart()}>Vaciar carrito</button>
-                        <button className='contentCart-btnClr' onClick={()=>createOrder()}>Confirmar compra</button>
-                        <button className='contentCart-btnClr' onClick={()=>updateOrder()}>Actualizar orden</button>
+                        <button className='contentCart-btnClr' onClick={createOrder}>Confirmar compra</button>
                     </>: 
                     <>
                         <span className='contentPrice'> Sin productos</span>
