@@ -6,8 +6,8 @@ import React, {useState, useContext} from 'react';
 import CartContext from '../../context/CartContext';
 
 const Item = ({cod, name, price, stock, ...rest}) => {
-    const [quantity, setQuantity] = useState(0)
-    const { addItem } = useContext(CartContext)
+    const [quantity, setQuantity] = useState(0);
+    const { addItem } = useContext(CartContext);
     const handleOnAdd = (count) => {
         setQuantity(count);
         addItem({cod, name, price}, count);

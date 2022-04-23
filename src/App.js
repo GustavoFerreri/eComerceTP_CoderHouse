@@ -8,24 +8,25 @@ import Contact from './components/Contact/Contact';
 import Cart from './components/Cart/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContextProvider } from './context/CartContext'
+import { NotificationProvider } from './notification/notification'
 
-// Se vuelve a Branch Category como base, error masivo al fusionar con master
 function App() {
   return (
     <div className="App">
-      <CartContextProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/product/:category' element={<Product />}/>
-            <Route path='/contact' element={<Contact />}/>
-            <Route path='/detail/:Cod' element={<ItemDetailContainer /> }/>
-            <Route path='/cart' element={<Cart />} />
-          </Routes>
-        </BrowserRouter>
-      </CartContextProvider>
-
+      <NotificationProvider>
+        <CartContextProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/product/:category' element={<Product />}/>
+              <Route path='/contact' element={<Contact />}/>
+              <Route path='/detail/:Cod' element={<ItemDetailContainer /> }/>
+              <Route path='/cart' element={<Cart />} />
+            </Routes>
+          </BrowserRouter>
+        </CartContextProvider>
+      </NotificationProvider>
     </div>
   );
 }
