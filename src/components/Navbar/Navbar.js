@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useState } from 'react';
 import { NavItem } from './NavItem';
-import { Button } from '../Button/Button';
 import { CartWidget } from '../CartWidget/CartWidget';
 import CartContext from '../../context/CartContext';
 import './Navbar.css';
@@ -31,7 +30,6 @@ const Navbar = (props) => {
                     )
                 })}
             </ul>
-            <Button>Sign Up</Button>
             {getQuantity() === 0 ? '': <CartWidget>{getQuantity()}</CartWidget>}
         </nav>    
     );

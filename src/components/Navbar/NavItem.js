@@ -8,15 +8,5 @@ export const NavItem = [
         title: 'Productos',
         link: '/product/all',
         cName: 'nav-item'
-    },
-    {
-        title: 'Contactenos',
-        link: '/contact',
-        cName: 'nav-item'
-    },
-    {
-        title: 'Sign Up',
-        link: '#',
-        cName: 'nav-item-movil'
     }
 ]
